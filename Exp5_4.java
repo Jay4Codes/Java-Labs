@@ -10,7 +10,7 @@ class Multiples extends Thread {
     public void run() {
         long startTime = System.nanoTime();
         for (int i = 1; i <= 10; i++) {
-            System.out.println(num + " X " + i + " = " + (num * i));
+            System.out.println(num + " x " + i + " = " + (num * i));
         }
         long stopTime = System.nanoTime();
         long executionTime = startTime - stopTime;
@@ -20,7 +20,7 @@ class Multiples extends Thread {
     }
 }
 
-class Question4 {
+class MultiplesMain {
     public static void main(String[] args) {
         Multiples t1 = new Multiples(3);
         Multiples t2 = new Multiples(5);
