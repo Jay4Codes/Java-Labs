@@ -97,10 +97,10 @@ class CurrentAccount extends Account {
 class Main {
     public static void main(String[] args) {
         Account[] accounts = new Account[2];
-        accounts[0] = new SavingAccount(24679, 2);
-        accounts[1] = new CurrentAccount(23258, 1000);
-        accounts[0].deposit(5000);
-        accounts[1].deposit(5000);
+        accounts[0] = new SavingAccount(131288, 2);
+        accounts[1] = new CurrentAccount(279453, 1000);
+        accounts[0].deposit(8000);
+        accounts[1].deposit(4000);
         for (int i = 0; i < accounts.length; i++) {
             if (accounts[i] instanceof SavingAccount) {
                 SavingAccount account = (SavingAccount) accounts[i];
@@ -110,11 +110,5 @@ class Main {
                 account.print();
             }
         }
-        // Account acc1 = new SavingAccount(24679, 2);
-        // Account acc2 = new CurrentAccount(23258, 1000);
-        // acc1.deposit(5000);
-        // acc2.deposit(5000);
-        // acc1.print();
-        // acc2.print();
     }
 }
