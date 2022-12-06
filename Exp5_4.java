@@ -1,5 +1,16 @@
 import java.util.concurrent.TimeUnit;
 
+class MultiplesMain {
+    public static void main(String[] args) {
+        Multiples t1 = new Multiples(3);
+        Multiples t2 = new Multiples(5);
+        Multiples t3 = new Multiples(13);
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+
 class Multiples extends Thread {
     int num;
 
@@ -17,16 +28,5 @@ class Multiples extends Thread {
         double executionTimeInSeconds = TimeUnit.MILLISECONDS.convert(executionTime, TimeUnit.NANOSECONDS);
         System.out.println(
                 Thread.currentThread().getName() + " got executed in " + executionTimeInSeconds / 1000 + " seconds");
-    }
-}
-
-class MultiplesMain {
-    public static void main(String[] args) {
-        Multiples t1 = new Multiples(3);
-        Multiples t2 = new Multiples(5);
-        Multiples t3 = new Multiples(13);
-        t1.start();
-        t2.start();
-        t3.start();
     }
 }
